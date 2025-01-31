@@ -9,6 +9,7 @@ function addTodo(){
   newEl.setAttribute("id", num);
   newEl.setAttribute("class", "todos");
   const input=document.querySelector("input").value;
+  if (!input.trim()) return;
   newEl.innerHTML="<div><h4 id='line'><input id='checkbox' type='checkbox' onclick='clicked(this)'>"+ input +"</h4></input></div><button class='btn2' onclick='deleteTodo("+num+")'>Delete</button>";
   num=num+1;
   const parentEl=document.querySelector("body")
